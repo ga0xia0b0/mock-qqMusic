@@ -1,0 +1,448 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url(./data/Poppins-Light.ttf);
+}
+
+body {
+    margin: 0;
+}
+header {
+    display: flex;
+    justify-content: space-around;
+    height: 90px;
+    width: 80%;
+    margin-left: 160px;
+
+    h1 {
+        flex-shrink: 0;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    div#search-bar input {
+        width: 0;
+    }
+    div#search-bar {
+        width: 30px;
+    }
+    header h1 {
+        position: absolute;
+        left: 30px;
+    }
+}
+
+ul.header {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    width: 500px;
+    padding-left: 28px;
+    li {
+        width: 94px;
+    }
+}
+
+img.客户端 {
+    display: none;
+    position: absolute;
+    top: 70px;
+    width:156px;
+    height: 156px;
+    border-radius: 3px;
+    box-shadow: 0 0 10px #999;
+    cursor:pointer;
+    z-index: 1;
+}
+a.客户端:hover~img.客户端 {
+    display: block;
+}
+img.客户端:hover {
+    display: block;
+}
+div.login {
+    min-width: 60px;
+}
+div.login.vip {
+    min-width: 124px;
+}
+li:not(.mvLi) {
+    display: flex;
+    list-style: none;
+    flex: 1;
+    height: 100%;
+}
+li:not(.mvLi):hover{
+    color: #31c27c;
+}
+a.header {
+    text-align: center;
+    text-decoration: none; /* 移除下划线 */
+    color: inherit;        /* 不改变颜色 */
+    font-size: 18px;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    height: 100%;
+    width: 100%;  /* 使链接（可点击区域）填充整个li */
+}
+ul.nav {
+    width: 50%;
+    padding-left: 390px;
+    margin-bottom: 0;
+    min-width: 800px;
+    li {
+        display: inline-flex;
+        height: 36px;
+        margin-right: 45px;
+    }
+}
+div.nav {
+    height: 36px;
+}
+a.nav {
+    text-align: center;
+    text-decoration: none; /* 移除下划线 */
+    color: inherit;        /* 不改变颜色 */
+    align-items: center; /* 垂直居中 */
+    font-size: 15px;
+}
+a#MV {
+    color: #31c27c;
+}
+ul.con-nav {
+    position: relative;
+    margin: 50px 0 0;
+    padding: 0;
+    min-width: 800px;
+}
+ul.con-nav * {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 28px;
+}
+ul.con-nav li {
+    height: 28px;
+    width: 44px;
+    margin-right: 20px;
+}
+li#title {
+    height: 28px;
+}
+ul#con-nav2 {
+    padding-top: 12px;
+    margin-top: 0;
+}
+li#title {
+    font-size: 14px;
+}
+li#title:hover {
+    color: black;
+}
+a.con-nav {
+    text-align: center;
+    text-decoration: none; /* 移除下划线 */
+    color: inherit;        /* 不改变颜色 */
+    font-size: 14px;
+    height: 100%;
+    width: 100%;  /* 使链接（可点击区域）填充整个li */
+}
+#音乐馆 {
+    color: white;
+    background-color: #31c27c;
+}
+img.search {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+}
+input {
+    width: 174px;
+    height: 36px;
+    border: none;
+    padding: 0;
+    outline: none;  /* 去除点击时的边框 */
+    transition: width .6s ease-out,visibility .6s ease-out 1ms; /* 添加过渡效果 */
+    line-height: 30px;
+    font-size: 14px;
+}
+#search-bar {
+    border: 1px solid #c9c9c9;
+    border-radius: 3px;  /* 圆角 */
+    height: 36px;
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width .6s ease-out,visibility .6s ease-out 1ms; /* 添加过渡效果 */
+}
+div.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.login * {
+    font-size: 17px;
+}
+div.vip * {
+    width: 122px;
+    font-size: 14px;
+}
+ul.下拉框 {
+    display: none;
+    position:absolute;
+    top: 65px;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    background-color: white;
+}
+ul.下拉框 li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin: 0;
+}
+ul.下拉框 li:first-child {
+    border-bottom: 1px solid #c9c9c9;
+}
+a.vip:hover~.下拉框,ul.下拉框:hover {
+    display: block;
+    border: 1px solid #c9c9c9;
+    border-radius: 3px;
+}
+ul.下拉框 li:hover {
+    background-color: #31c27c;
+    color: white;
+}
+a.充值:hover {
+    background-color: #31c27c;
+    color: white;
+}
+a.vip {
+    text-align: center;
+    text-decoration: none; /* 移除下划线 */
+    color: inherit;        /* 不改变颜色 */
+    width: 100%;
+}
+a.开通vip {
+    width: 122px;
+    height: 40px;
+    background-color: #31c27c;
+    color: white;
+    border: 1px solid #c9c9c9;
+    border-radius: 3px;
+    line-height: 38px;
+}
+a.充值 {
+    background-color: white;
+    color: black;
+}
+div.充值 * {
+    width: 83px;
+}
+a.开通vip::after {
+    content: "▼";
+    font-size: 10px;
+    margin-left: 20px;
+}
+a.开通vip:hover::after {
+    content: "▲";
+    font-size: 10px;
+    margin-left: 20px;
+}
+a.开通vip.hover::after {
+    content: "▲";
+    font-size: 10px;
+    margin-left: 20px;
+}
+header {
+    border-bottom: 1px solid rgba(201, 201, 201, 0.3)  /* 分割线 */
+}
+div.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+div.content:after {
+    content: "";
+    display: block;
+    clear: both;       /* 清除浮动 */
+}
+div.con-status {
+    overflow: hidden;
+    height: 60px;
+}
+div.con-status span {
+    display: block;
+    float: left;
+    width: 63px;
+    height: 38px;
+    line-height: 35px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #c9c9c9;
+    border-radius: 2px;
+    margin-right: 6px;
+    margin-top: 17px;
+}
+div.con-status span:hover {
+    background-color: #31c27c;
+    color: white;
+}
+div.con-status span a.cancel1,
+div.con-status span a.cancel2 {
+    display: inline-flex;
+    line-height: 16px;
+    width: 15px;
+    height: 15px;
+    text-decoration: none; /* 移除下划线 */
+    color: inherit;        /* 不改变颜色 */
+    font-size: 18px;
+    position: relative;
+    top: 1.5px;
+    right: -4px;
+    border-radius: 50%;
+}
+div.con-status span a.cancel1:hover,
+div.con-status span a.cancel2:hover {
+    background-color: rgb(105, 202, 154);
+}
+h2 {
+    font-weight: 400;
+    float: left;
+}
+ul.new-hot {
+    display: flex;
+    width: 10%;
+    padding: 0;
+    border: 1px solid #c9c9c9;
+    border-radius: 2px;
+    float: right;
+    min-width: 112px;
+}
+ul.new-hot li {
+    margin: 0;
+    height: 40px;
+    width: 62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul.new-hot li a {
+    text-align: center;
+    text-decoration: none; /* 移除下划线 */
+    color: inherit;        /* 不改变颜色 */
+    line-height: 40px;    /* 垂直居中 */
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+}
+
+ul.new-hot a.selected {
+    background-color: #31c27c;
+    color: white;
+}
+a.con-nav.selected {
+    background-color: #31c27c;
+    color: white;
+}
+li.mvLi {
+    list-style: none;
+    float: left;
+    overflow: hidden;
+}
+li.mvLi a.pic {
+    display: block;
+    width: 100%;
+    max-height: 161px;
+    margin-bottom: 13px;
+    overflow: hidden;   /*hover放大图片时不超出*/
+    position: relative;   /*用于overlay定位*/
+}
+li.mvLi a.pic img.cover {
+    transform: scale(1);
+    transition: transform .75s;
+}
+li.mvLi a.pic img.cover:hover {
+    transform: scale(1.1);
+}
+li.mvLi a.pic img.overlay {
+    position: absolute;
+    top:52px;
+    left: 109px;
+    width: 66px;
+    height: 66px;
+    opacity: 0; /* 初始透明度 */
+    transform: scale(0.6) translateZ(0);   /* 初始大小 */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* 透明度、大小平滑过渡效果 */
+}
+li.mvLi a.pic:hover img.cover {
+    transform: scale(1.1);
+}
+li.mvLi a.pic:hover img.overlay {
+    opacity: 1; /* 鼠标悬停时完全不透明 */
+    transform: scale(1);   /* 放大 */
+}
+ul.content {
+    margin: 12px -20px 0 0;
+    padding: 0;
+}
+ul.content:after {
+    content: "";
+    display: block;
+    clear: both;       /* 清除浮动 */
+}
+
+ul.content li {
+    width: 25%;           /* 设置最小宽度，防止过度缩小 */
+    padding-bottom: 25px;
+    overflow: hidden;
+}
+div.liBox {
+    position: relative;
+    margin-right: 20px;
+}
+div.liBox a {
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Poppins', sans-serif;
+    color: #999;
+}
+div.liBox span {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    height: 23px;
+}
+div.liBox a.title {
+    display: block;
+    color:black;
+    height: 21px;
+    white-space: nowrap;       /* 不换行 */
+    overflow: hidden;         /* 超出部分隐藏 */
+    text-overflow: ellipsis;    /* 超出部分用省略号代替 */
+
+}
+div.liBox * {
+    font-size: 14px;
+}
+div.liBox a:hover {
+    color: #31c27c;
+}
+div.liBox img {
+    width: 25px;
+    height: 20px;
+    margin-right: 3px;
+}
+@media (max-width: 1240px) {
+    div.content{
+        margin: 0 50px;
+        min-width: 900px;
+    }
+}
