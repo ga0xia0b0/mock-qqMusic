@@ -318,7 +318,7 @@ function createLi(picUrl, title, singer, playcnt, pubdate) {
   newDiv.appendChild(newSpan);
   let newImg = document.createElement('img');
   newImg.src = './data/listen_icon.png';
-  let textPlaycnt = document.createTextNode(playcnt);
+  let textPlaycnt = document.createTextNode(formatPlaycnt(playcnt));
   let textContent = document.createTextNode('\u00A0\u00A0');
   let textPubdate = document.createTextNode(parseDate(pubdate));
   newSpan.appendChild(newImg);
@@ -381,4 +381,12 @@ function createVersionElement(versionNum) {
     return versionElement;
   }
   return null;
+}
+
+// 格式化播放量；
+function formatPlaycnt(playcnt) {
+  if(playcnt>10000) {
+    return (playcnt/10000).toFixed(1) + '万';
+  }
+  return playcnt;
 }
